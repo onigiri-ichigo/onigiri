@@ -1,0 +1,16 @@
+<div class="main-warpper">
+<div class="main">
+ <div class="copy-container">
+<h3>投稿一覧</h3>
+<% @posts.each do|post| %>
+    <%=post.title%><br>
+        <img src="<%="/diary_images/#{post.diary_image_name}"%>" class="self-icon">
+        <div class="bollen-right">
+        <div class="p">
+        <%=link_to(post.content,"/posts/#{post.id}")%>
+        </div>
+        </div><br><br>
+    <%end%>
+</div>
+</div>
+</div>

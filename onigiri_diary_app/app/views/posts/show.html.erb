@@ -1,0 +1,39 @@
+<div class="main-warpper">
+<div class="main">
+<div class="copy-container">
+<h3></h3>
+<%if @user!=nil%>
+<div class="user_t">
+投稿者：</div><div class="user">
+<%=@user.name%></div>
+<div class="title_t">タイトル：</div><div class="title s"><%=@post.title%></div>
+<div class="content_t">内容：</div><div class="content s"><%=@post.content%></div>
+<br>
+<div class="btn">
+<%if Like.find_by(user_id: @current_user.id,post_id: @post.id)%>
+<%=link_to("/likes/#{@post.id}/destroy",{method:"post"}) do%>
+<span class="fa fa-heart like-btn"></span>
+<%end%>
+<%else%>
+<%=link_to("/likes/#{@post.id}/create",{method:"post"}) do%>
+<span class="fa fa-heart unlike-btn"></span>
+<%end%>
+<%end%>
+</div>
+<div class="like-text">
+<%=Like.where(post_id: @post.id).count%>いいね！
+</div>
+<br><br><img src="<%="/diary_images/#{@post.diary_image_name}"%>" class="diary_icon"><br>
+<%=link_to("削除","/posts/#{@post.id}/destroy")%>
+<%=link_to("編集","/posts/#{@post.id}/edit")%>
+<%else%>
+<p>退会したユーザの日記です</p>
+<div class="title_t">タイトル：</div><div class="title s"><%=@post.title%></div>
+<div class="content_t">内容：</div><div class="content s"><%=@post.content%></div><br>
+<br><br><img src="<%="/diary_images/#{@post.diary_image_name}"%>" class="diary_icon"><br>
+<%=link_to("削除","/posts/#{@post.id}/destroy")%>
+<%=link_to("編集","/posts/#{@post.id}/edit")%>
+<%end%>
+</div>
+</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="main-warpper">
+<div class="main">
+<div class="copy-container">
+<h3></h3>
+<%if @current_user%>
+    <%=@user.name%>の投稿<br><br>
+<% @user.posts.each do|post|%>
+    <%=post.title%><br>
+    <img src="<%="/diary_images/#{post.diary_image_name}"%>" class="self-icon">
+    <div class="bollen-right">
+    <%=link_to(post.content,"/posts/#{post.id}")%>
+    </div><br><br>
+<%end%>
+<%else%>
+日記がありません
+<%end%>
+</div>
+</div>
+</div>

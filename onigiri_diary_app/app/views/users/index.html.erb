@@ -1,0 +1,11 @@
+<div class="main-warpper">
+<div class="main">
+ <div class="copy-container">
+<h3>ユーザー一覧</h3>
+<% @users.each do|user| %>
+    <img src="<%="/user_images/#{user.user_image}"%>" class="self-icon-user-index">
+    <%=link_to(user.name,"/users/#{user.id}")%><br><br>
+<%end%>
+</div>
+</div>
+</div>

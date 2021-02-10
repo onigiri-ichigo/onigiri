@@ -1,0 +1,37 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.main-warpper{
+    background-image: url("/images/1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main{
+    text-align: center;
+    min-height: 600px;
+}
+
+.copy-container h3{
+    color: rgb(139, 148, 148);
+}
+
+.top{
+    font-size: 18px;
+}
+
+.message-form{
+}
+
+.s-btn{
+    display: inline-block;
+    color:honeydew
+}
+
+.new{
+    background-color: rgb(240, 6, 57);
+}
+
+.login{
+    background-color: rgb(41, 216, 79);
+}

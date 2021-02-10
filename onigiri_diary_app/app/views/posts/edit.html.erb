@@ -1,0 +1,15 @@
+<div class="main-warpper">
+<div class="main">
+<div class="copy-container">
+<%=form_tag("/posts/#{@post.id}/update",{multipart:true})do%>
+<p>タイトル</p>
+<input name="title" value="<%=@post.title%>">
+<p>内容</p>
+<textarea name="content"><%=@post.content%></textarea><br>
+<p>写真</p>
+<input type="file" value="選択" name="diary_image"><br>
+<input type="submit" value="編集">
+<%end%>
+</div>
+</div>
+</div>

@@ -1,0 +1,99 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.bollen-right{
+    border: solid 2px #000000;
+    border-radius: 12px; 
+    background-color: #fff;
+    opacity: 0.8;
+    width: 300px;
+    height: 50px;
+    position:relative;
+    left:45%;
+    text-align: left;
+ }
+
+ .p{
+     position: absolute;
+     width: 300px;
+     height:50px;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+     overflow: hidden;
+ }
+
+ .self-icon{
+     border: solid 2px #000;
+     height: 50px;
+     width: 50px;
+     float: left;
+     position: relative;
+     left:40%;
+ }
+ 
+ .diary_icon {
+     width: 300px;
+     height: 300px;
+ }
+
+ .user_t{
+ }
+
+ .title_t{
+
+ }
+
+ .content_t{
+ }
+
+ .user{
+    border: solid 1px #000000;
+    border-radius: 10px; 
+    background-color: #fff;
+    opacity: 0.8; 
+    display: inline-block;
+    width: 500px;
+}
+
+.title{
+    border: solid 1px #000000;
+    border-radius: 10px; 
+    background-color: #fff;
+    opacity: 0.8;
+    display: inline-block;
+    width: 500px;
+}
+
+.content{
+     border: solid 1px #000000;
+     border-radius: 10px; 
+     background-color: #fff;
+     opacity: 0.8; 
+     position: relative;
+     display: inline-block;
+     max-width: 500px;
+     min-width: 500px;
+     min-height: 300px;
+     overflow-y:scroll;
+ }
+
+ .like-btn{
+     color:red;
+     font-size: 18px;
+ }
+
+ .unlike-btn{
+     color:gray;
+     font-size: 18px;
+ }
+
+ .btn{
+     position:absolute;
+     left:31%;
+ }
+
+ .like-text{
+     position:absolute;
+     left:33%;
+ }

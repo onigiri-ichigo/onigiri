@@ -1,0 +1,32 @@
+<div class="main-warpper">
+    <div class="main">
+        <div class="copy-container">
+            <h3>Let's Start!</h3>
+        </div>
+        <div class="top">    
+            <%=link_to("/signup") do%><p class="s-btn new">新規登録</p><%end%><br>
+            <%=link_to("/login") do%><p class="s-btn login">ログイン</p><%end%>
+        </div>
+        <div class="message_form">
+        <%=form_tag("/mailer/create",{multipart:true}) do%>
+            <p>お問い合わせ</p>
+            <%if @current_user==nil%>
+            <p>名前</p>
+            <input name="name" value="<%=@name%>">
+            <p>メールアドレス</p>
+            <input name="email" value="<%=@email%>">
+            <p>内容</p>
+            <textarea name="message"><%=@message%></textarea>
+            <%else%>
+            <p>名前</p>
+            <input name="name" value="<%=@current_user.name%>">
+            <p>メールアドレス</p>
+            <input name="email" value="<%=@user.email%>">
+            <p>内容</p>
+            <textarea name="message"><%=@message%></textarea>
+            <%end%><br>
+            <input type="submit" value="送信">
+        <%end%>
+        </div>  
+    </div> 
+</div>
